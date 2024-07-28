@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+{% block content %}
+
+
+
+
+        <!-- header -->
+        
+        
+        
+        
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        
+        
+        
+        	            
+            <!-- primary -->
+        	<div id="primary" class="content-area">
+            	
+                <!-- site-content -->
+                <div id="content" class="site-content" role="main">
+                
+                
+                
+                
+                	
+                    
+                    <!-- InstanceBeginEditable name="FeaturedContent" -->
+					
+                    					
+					<!-- InstanceEndEditable -->
+                	
+                    
+                    
+                    <!-- layout-medium -->
+                	<div class="layout-medium">
+                    
+                    
+                    
+						<!-- InstanceBeginEditable name="LayoutMediumContent" -->
+                		
+                        
+                        <!-- entry-header -->
+                        <header class="entry-header">
+                        	<h1 class="entry-title">LATEST STORIES</h1>
+                        </header>
+                        <!-- entry-header -->
+                        
+                
+                
+                    	<!-- BLOG MASONRY -->
+                        <div class="masonry blog-masonry" data-layout="masonry" data-item-width="340">
+                            
+                            
+
+
+
+                            <!-- .hentry -->
+                            {% for blog in blogs %}
+                            <article class="hentry post format-video">
+                             
+                                <!-- .featured-image -->
+                                <div class="featured-image">
+                                    <a href="http://127.0.0.1:8000/admin/portfolio/blog/"><img src="{{ blog.image.url }}" alt="blog-image"></a>
+                                </div>
+                            
+                                <!-- .featured-image -->                 
+                                <!-- .entry-header -->
+                                <header class="entry-header">                     
+                                    <!-- .entry-title -->
+                                    <h1 class="entry-title"><a href="#">{{ blog.title }}</a></h1>                    
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            <time class="entry-date" datetime="{{ blog.created_date| date:'c' }}">{{ blog.created_date| date:'F j, Y' }}</time>
+                                        </span> 
+                                        <span class="comment-link">
+                                            <a href="blog-single.html#comments">124 Comments</a>
+                                        </span>
+                                        <span class="read-time"><span class="eta"></span> read</span>
+                                        <span class="cat-links">
+                                            <a href="#" title="View all posts in Adventure" rel="category tag">LIFE</a>
+                                        </span>	
+                                    </div>
+                                    <!-- .entry-meta -->
+                                </header>
+                                <!-- .entry-header -->
+                                <!-- .entry-content -->
+                                <div class="entry-content">                                
+                                	<p>It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years. 
+                                        <span class="more">
+                                            <a href="blog-single.html" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+                                        </span>
+                                    </p>    
+                             </div>
+                               
+                                <!-- .entry-content -->           
+                            </article>
+                            <!-- .hentry -->
+                            {% endfor %}
+                            
+                            
+                        </div>
+                                       
+                    
+                        </div>
+                        <!-- BLOG MASONRY -->
+               
+                    	
+                            
+                        
+                        <!-- .navigation .pagination -->
+                        <nav class="navigation pagination" role="navigation">
+                            
+                            <h2 class="screen-reader-text">Posts navigation</h2>
+                            
+                            <!-- .nav-links -->
+                            <div class="nav-links">
+                                <a class="page-numbers prev" href="#">Prev</a>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>1</a>
+                                <span class="page-numbers dots">…</span>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>4</a>
+                                <span class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>5</span>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>6</a>
+                                <span class="page-numbers dots">…</span>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>8</a>
+                                <a class="page-numbers next" href="#">Next</a>
+                            </div> 
+                            <!-- .nav-links -->
+                            
+                        </nav> 
+                        <!-- .navigation .pagination -->
+              
+                                    
+                <!-- InstanceEndEditable -->
+                    	
+                        
+                    	
+                    </div>
+                    <!-- layout-medium -->
+                    
+                    
+                
+                
+                	
+                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+        {% endblock content %}

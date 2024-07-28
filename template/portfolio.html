@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+{% block content %}
+
+
+<ul id="filters" class="filters">
+  <li class="current"><a href="#" data-filter="*">ALL</a></li>
+  <li><a href="#" data-filter=".design">DESIGN</a></li>
+  <li><a href="#" data-filter=".coding">CODING</a></li>
+  <li><a href="#" data-filter=".logo">LOGO</a></li>
+</ul>
+                            
+                        <!-- .media-grid-wrap -->
+                        <div class="media-grid-wrap">
+                        
+                            <!-- PORTFOLIO -->
+                            <div class="portfolio media-grid masonry" data-layout="masonry" data-item-width="360">
+                            
+                              
+                              <!-- portfolio-item - lightbox gallery -->
+                              <div class="media-cell logo hentry">
+                                 {% for portfolio in portfolio %}
+                                <div class="media-box image">
+                                    <img src="{{ portfolio.image.url}}" alt="portfolio-post">
+                                    <div class="mask"></div>
+                                    <!-- lightbox - gallery -->
+                                    <a href="{% static 'images/portfolio/lightbox-01.jpg'%}" class="lightbox" title="Octopus is dangerous!"></a>
+                                    <a href="{% static 'images/portfolio/lightbox-02.jpg'%}" class="lightbox" title=""></a>
+                                    <a href="{% static 'images/portfolio/lightbox-03.jpg'%}" class="lightbox" title="Dog have dreams"></a>
+                                    <a href="https://vimeo.com/193674451" title="The Artist" class="lightbox mfp-iframe"></a>
+                                    <!-- lightbox - gallery -->
+                                </div>
+                                
+                                <div class="media-cell-desc">
+                                    <h3>{{ portfolio.title}}</h3>
+                                    <p class="category">{{ portfolio.description }}</p>
+                                </div>
+                                {% endfor %}
+                              </div>
+   
+                      
+                              
+
+
+
+
+
+                            </div>
+                            <!-- PORTFOLIO -->
+                        
+                        
+                        </div>    
+						<!-- .media-grid-wrap -->
+                        
+                        
+                        
+                
+                		<!-- InstanceEndEditable -->
+                    	
+                        
+                    	
+                    </div>
+                    <!-- layout-medium -->
+                    
+                    
+                
+                
+                	
+                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+        {% endblock content %}
+       

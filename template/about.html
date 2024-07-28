@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Me {% endblock title %}
+{% block content %}
+
+
+      
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        
+
+        	<div id="primary" class="content-area">
+            	
+                <!-- site-content -->
+                <div id="content" class="site-content" role="main">
+                
+                	<div class="layout-medium">
+                    
+                        <article class="hentry page">
+                        
+                        	
+                            <!-- .entry-header -->   
+                            <header class="entry-header">
+                                <h1 class="entry-title">About Me</h1>
+                            </header>
+                            <!-- .entry-header -->   
+                            
+                            
+                            <!-- .entry-content -->
+                            <div class="entry-content">
+                                {% for about in about %}
+                                <p>
+                                    <a href="http://127.0.0.1:8000/admin/portfolio/about/" target="_blank">
+                                        <img src="{{ about.image.url }}" alt="profile photo">
+                                    </a>
+                                </p>
+                                
+                                <h2 class="section-title center">{{ about.title }}</h2>
+                                
+                                <p>{{ about.description}}</p>
+                                
+                                
+                                <h2 class="section-title center">{{ about.created_date }}</h2>
+                                
+                                <!-- row -->
+                                <div class="row">
+                                    
+                                    <!-- column 6/12 -->
+                                    <div class="col-sm-6 col-lg-3">
+                                        
+                                        <!-- service -->
+                                        <div class="service">
+                                            <i class="pw-icon-brush"></i>
+                                            <h4>Graphic Design</h4>
+                                            <p>I design super cool websites. It is a long established fact that a reader will be distracted by the readable content.</p>
+                                        </div>
+                                        <!-- service -->
+
+                                    </div>
+                                    <!-- column 6/12 -->
+                                    
+                                    <!-- column 6/12 -->
+                                    <div class="col-sm-6 col-lg-3">
+
+                                        <!-- service -->
+                                        <div class="service">
+                                            <i class="pw-icon-camera"></i>
+                                            <h4>Photography</h4>
+                                            <p>I can design beautiful type faces for both digital and print media. It is a long established fact that a reader will be distracted.</p>
+                                        </div>
+                                        <!-- service -->
+
+                                    </div>
+                                    <!-- column 6/12 -->
+
+                                    <!-- column 6/12 -->
+                                    <div class="col-sm-6 col-lg-3">
+
+                                        <!-- service -->
+                                        <div class="service">
+                                            <i class="pw-icon-beaker"></i>
+                                            <h4>Web Development</h4>
+                                            <p>I write about web design. It is a long established fact that a reader will be distracted by the readable content.</p>
+                                        </div>
+                                        <!-- service -->
+
+                                    </div>
+                                    <!-- column 6/12 -->
+                                    
+                                    <!-- column 6/12 -->
+                                    <div class="col-sm-6 col-lg-3">
+
+                                        <!-- service -->
+                                        <div class="service">
+                                            <i class="pw-icon-music"></i>
+                                            <h4>Music Composer</h4>
+                                            <p>I have strong project management skills. It is a long established fact that a reader will be distracted.</p>
+                                        </div>
+                                        <!-- service -->
+
+                                    </div>
+                                    <!-- column 6/12 -->
+                                    
+                                </div>
+                                <!-- row -->
+                                
+                                
+                                
+                                
+                                <h2 class="section-title center">FUN FACT</h2>
+                                
+                                <!-- row -->
+                                <div class="row">
+                                    
+                                    <!-- column 3/12 -->
+                                    <div class="col-xs-6 col-sm-4 col-md-2">
+
+                                        <!-- fun-fact -->
+                                        <div class="fun-fact">
+                                            <i class="pw-icon-thumbs-up"></i>
+                                            <h4>72 PROJECTS COMPLETED</h4>
+                                        </div>
+                                        <!-- fun-fact -->
+
+                                    </div>
+                                    <!-- column 3/12 -->
+                                    
+                                    <!-- column 3/12 -->
+                                    <div class="col-xs-6 col-sm-4 col-md-2">
+
+                                        <!-- fun-fact -->
+                                        <div class="fun-fact">
+                                            <i class="pw-icon-github-circled"></i>
+                                            <h4>24 MILIONS LINES OF CODE</h4>
+                                        </div>
+                                        <!-- fun-fact -->
+
+                                    </div>
+                                    <!-- column 3/12 -->
+                                    
+                                    <!-- column 3/12 -->
+                                    <div class="col-xs-6 col-sm-4 col-md-2">
+
+                                        <!-- fun-fact -->
+                                        <div class="fun-fact">
+                                            <i class="pw-icon-mic-outline"></i>
+                                            <h4>24 PODCASTS RELEASED</h4>
+                                        </div>
+                                        <!-- fun-fact -->
+
+                                    </div>
+                                    <!-- column 3/12 -->
+                                    
+                                    <!-- column 3/12 -->
+                                    <div class="col-xs-6 col-sm-4 col-md-2">
+
+                                        <!-- fun-fact -->
+                                        <div class="fun-fact">
+                                            <i class="pw-icon-pin-outline"></i>
+                                            <h4>230 ARTICLES WROTE</h4>
+                                        </div>
+                                        <!-- fun-fact -->
+
+                                    </div>
+                                    <!-- column 3/12 -->
+                                    
+                                    <!-- column 3/12 -->
+                                    <div class="col-xs-6 col-sm-4 col-md-2">
+
+                                        <!-- fun-fact -->
+                                        <div class="fun-fact">
+                                            <i class="pw-icon-location"></i>
+                                            <h4>14 COUNTRIES VISITED</h4>
+                                        </div>
+                                        <!-- fun-fact -->
+
+                                    </div>
+                                    <!-- column 3/12 -->
+
+                                    <!-- column 3/12 -->
+                                    <div class="col-xs-6 col-sm-4 col-md-2">
+
+                                        <!-- fun-fact -->
+                                        <div class="fun-fact">
+                                            <i class="pw-icon-instagram"></i>
+                                            <h4>2300 SHOTS CAPTURED</h4>
+                                        </div>
+                                        <!-- fun-fact -->
+
+                                    </div>
+                                    <!-- column 3/12 -->
+
+                                </div>
+                                <!-- row -->
+                                {% endfor %}
+                                
+                                
+                                
+                                <h2 class="section-title center">I am a social guy</h2>
+                                <!-- SOCIAL -->
+                                <ul class="social">
+                                    <li><a class="facebook" href="#"></a></li>
+                                    <li><a class="twitter" href="#"></a></li>
+                                    <li><a class="linkedin" href="#"></a></li>
+                                    <li><a class="google-plus" href="#"></a></li>
+                                    <li><a class="pinterest" href="#"></a></li>
+                                    <li><a class="github" href="#"></a></li>
+                                    <li><a class="behance" href="#"></a></li>
+                                    <li><a class="dribbble" href="#"></a></li>
+                                    <li><a class="instagram" href="#"></a></li>
+                                    <li><a class="lastfm" href="#"></a></li>
+                                    <li><a class="vine" href="#"></a></li>
+                                    <li><a class="rss" href="#"></a></li>
+                                    <li><a class="vimeo" href="#"></a></li>
+                                    <li><a class="forrst" href="#"></a></li>
+                                    <li><a class="skype" href="#"></a></li>
+                                    <li><a class="picasa" href="#"></a></li>
+                                    <li><a class="youtube" href="#"></a></li>
+                                    <li><a class="flickr" href="#"></a></li>
+                                    <li><a class="tumblr" href="#"></a></li>
+                                    <li><a class="blogger" href="#"></a></li>
+                                    <li><a class="delicious" href="#"></a></li>
+                                    <li><a class="digg" href="#"></a></li>
+                                    <li><a class="friendfeed" href="#"></a></li>
+                                    <li><a class="wordpress" href="#"></a></li>
+                                    <li><a class="stack-overflow" href="#"></a></li>
+                                    <li><a class="foursquare" href="#"></a></li>
+                                    <li><a class="xing" href="#"></a></li>
+                                    <li><a class="weibo" href="#"></a></li>
+                                    <li><a class="soundcloud" href="#"></a></li>
+                                    <li><a class="fivehundredpx" href="#"></a></li>
+                                    <li><a class="slideshare" href="#"></a></li>
+                                </ul>
+                                <!-- SOCIAL -->
+                                
+                                
+                            </div>
+                            <!-- .entry-content -->
+                            
+                            
+                        </article>
+                        <!-- .hentry -->
+                
+                    
+                
+                		<!-- InstanceEndEditable -->
+                    	
+                        
+                    	
+                    </div>
+                    <!-- layout-medium -->
+                    
+                    
+                
+                
+                	
+                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+{% endblock content %}
+
+
+
+
