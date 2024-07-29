@@ -68,4 +68,4 @@ def portfolio_view(request):
     # context = {
     #   "portfolio" : portfolio,
     # }
-    return render(request, 'portfolio.html', {'portfolio': portfolio_item})
+    return render(request, 'portfolio_item.html', {'portfolio': portfolio_item})
