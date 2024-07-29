@@ -14,11 +14,12 @@ class Contact(models.Model):
         return f"{self.name} {self.email}"
     
 
-class Portfolio(models.Model):
-    title = models.CharField(max_length=50)
+class PortfolioItem(models.Model):
+    title = models.CharField(max_length=70)
     image = models.ImageField(upload_to='Images/portfolio')
     description = models.TextField()
-   
+    link = models.URLField()
+
     def __str__(self):
         return self.title
     

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+{% block content %}
+
+<header class="entry-header">
+                            
+  <h1 class="entry-title">PORTFOLIOItem</h1>
+  
+  <!--FILTERS-->
+  <ul id="filters" class="filters">
+    <li class="current"><a href="#" data-filter="*">ALL</a></li>
+    <li><a href="#" data-filter=".design">DESIGN</a></li>
+    <li><a href="#" data-filter=".coding">CODING</a></li>
+    <li><a href="#" data-filter=".logo">LOGO</a></li>
+  </ul>
+  <!--FILTERS-->
+      
+</header>
+<!-- .media-grid-wrap -->
+<div class="media-grid-wrap">
+    <!-- PORTFOLIO -->
+    <div class="portfolio media-grid masonry" data-layout="masonry" data-item-width="360">
+        {% for item in portfolio %}
+        <div class="media-cell {{ item.category }} hentry">
+
+            <div class="media-box">
+                <img src="{{ item.image.url }}" alt="portfolio-post">
+      
+                <div class="mask"></div>
+                <!-- Adjust the link according to the portfolio item detail page or other links -->
+                <a href="{{ item.image.url }}" class="lightbox" title="Octopus is dangerous!"></a>
+            </div>
+            <div class="media-cell-desc">
+                <h3>{{ item.title }}</h3>
+                <p class="category">{{ item.description }}</p>
+            </div>
+           
+        </div>
+        {% endfor %}
+    </div>
+    <!-- PORTFOLIO -->
+</div>
+<!-- .media-grid-wrap -->
+
+{% endblock content %}

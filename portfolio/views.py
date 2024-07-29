@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Contact,Gallery,Blog,Books,Portfolio,About
+from .models import Contact,Gallery,Blog,Books,PortfolioItem,About
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -64,8 +64,8 @@ def books_view(request):
     return render(request, 'books.html',context=context)
 
 def portfolio_view(request):
-    portfolio = Portfolio.objects.all()
-    context = {
-      "portfolio" : portfolio,
-    }
-    return render(request, 'portfolio.html', {'portfolio': portfolio})
+    portfolio_item = PortfolioItem.objects.all()
+    # context = {
+    #   "portfolio" : portfolio,
+    # }
+    return render(request, 'portfolio.html', {'portfolio': portfolio_item})
