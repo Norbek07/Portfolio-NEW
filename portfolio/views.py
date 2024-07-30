@@ -7,7 +7,7 @@ from hitcount.views import HitCountDetailView
 from django.core.paginator import Paginator
 from .forms import ContactForm
 from django.views.generic.edit import FormView
-
+from .bot import send_message
 
 
 class ContactFormView(FormView):
@@ -16,6 +16,11 @@ class ContactFormView(FormView):
     success_url = "/"
  
     def form_valid(self,form):
+      name = form.cleaned_data.get('name')
+      email = form.cleaned_data.get('email')
+      content = form.cleaned_data.get('content')
+      text = f"Name: {name}\nEmail: {email}\ntext: {content}"
+      send_message(text)
       form.save()
       return super().form_valid(form)
 
