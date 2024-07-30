@@ -5,7 +5,7 @@ from django.utils.html import format_html
 # Register your models here.
 
 
-admin.site.register((Comment,Category,Blog,Books))
+admin.site.register((Comment,Category))
 
 
 @admin.register(Contact)
@@ -15,6 +15,27 @@ class ContactAdmin(admin.ModelAdmin):
     def img(self, obj):
          return format_html('<img width="100" height="100" src="{}"style="border-radius: 50%;" />'.format(obj.image.url))
   
+
+
+
+@admin.register(Blog)
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ('img','title','created_date','content')
+    readonly_fields = ['id']
+    def img(self, obj):
+         return format_html('<img width="100" height="100" src="{}"style="border-radius: 50%;" />'.format(obj.image.url))
+  
+
+@admin.register(Books)
+class BooksAdmin(admin.ModelAdmin):
+    list_display = ('img','title','author','description','description','pages','publication_date','publisher')
+    readonly_fields = ['id']
+    def img(self, obj):
+         return format_html('<img width="100" height="100" src="{}"style="border-radius: 50%;" />'.format(obj.image.url))
+  
+
+
+
   
 @admin.register(PortfolioItem)
 class PortfolioItemAdmin(admin.ModelAdmin):
@@ -24,8 +45,6 @@ class PortfolioItemAdmin(admin.ModelAdmin):
     def img(self, obj):
          return format_html('<img width="100" height="100" src="{}"style="border-radius: 50%;" />'.format(obj.image.url))
   
-
-
 
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):

@@ -36,8 +36,6 @@ class ContactForm(ModelForm):
                     'content is required'])
         return self.cleaned_data
     
-from django import forms
-from .models import Blog
 
 class BlogForm(forms.ModelForm):
     class Meta:
