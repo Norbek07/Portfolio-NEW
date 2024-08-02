@@ -69,8 +69,8 @@ def books_view(request):
     return render(request, 'books.html',context=context)
 
 def portfolio_view(request):
-    portfolio_item = PortfolioItem.objects.all()
-    # context = {
-    #   "portfolio" : portfolio,
-    # }
-    return render(request, 'portfolio_item.html', {'portfolio': portfolio_item})
+    portfolio = PortfolioItem.objects.all()
+    context = {
+      "portfolio" : portfolio,
+    }
+    return render(request, 'portfolio_item.html',context)
